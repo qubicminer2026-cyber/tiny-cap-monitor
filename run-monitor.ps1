@@ -11,7 +11,7 @@ Push-Location $logDir
 & $claude -p "/tiny-cap-monitor" `
     --allowedTools "WebFetch,Bash,Read,Write,Edit" `
     --permission-mode acceptEdits `
-    --max-budget-usd 1.00 `
+    --max-budget-usd 0.20 `
     --output-format text `
     --no-session-persistence *>> $runLog
 Pop-Location
