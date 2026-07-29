@@ -264,15 +264,15 @@
 <div class="stats">
   <div class="stat">
     <div class="label">Letztes Update</div>
-    <div class="value" id="stat-updated" style="font-size:0.95rem;">29.07.2026, 12:13 MESZ</div>
+    <div class="value" id="stat-updated" style="font-size:0.95rem;">29.07.2026, 13:17 MESZ</div>
   </div>
   <div class="stat">
     <div class="label">Läufe gesamt</div>
-    <div class="value" id="stat-runs">2</div>
+    <div class="value" id="stat-runs">3</div>
   </div>
   <div class="stat">
     <div class="label">Einträge im Log</div>
-    <div class="value" id="stat-entries">3</div>
+    <div class="value" id="stat-entries">4</div>
   </div>
   <div class="stat">
     <div class="label">Heutige Kandidaten</div>
@@ -352,6 +352,20 @@
       kurznotiz: "Frisch gelisteter pump.fun-Token, moderates 6h-Momentum knapp im Zielkorridor, Liquiditaet ca. 16k USD.",
       nachbeobachtung_pct: null,
       nachbeobachtung_status: "ausstehend"
+    },
+    {
+      timestamp_iso: "2026-07-29T13:17:21+02:00",
+      fenster: "Nachmittags-Scan",
+      coin_name: "Keine Kandidaten",
+      ticker: null,
+      chain: null,
+      marketCap_usd: null,
+      liquidity_usd: null,
+      change_h6_pct: null,
+      quelle_url: null,
+      kurznotiz: "DEXScreener token-boosts/token-profiles Kandidatenliste (57 eindeutige Adressen) geprüft: kein Token unter $1M Market Cap lag im 6h-Zielkorridor von +5% bis +10%. Beobachtete Tiny-Caps zeigten überwiegend extreme Ausschläge oder Rückgänge, keine moderate Bewegung im Zielfenster.",
+      nachbeobachtung_pct: null,
+      nachbeobachtung_status: null
     }
   ];
 
@@ -385,12 +399,12 @@
       <tr>
         <td class="num">${fmtTime(r.timestamp_iso)}</td>
         <td>${r.fenster}</td>
-        <td><span class="coin-name">${r.coin_name}</span><br><span class="ticker">$${r.ticker}</span></td>
-        <td><span class="chain-chip">${r.chain}</span></td>
+        <td><span class="coin-name">${r.coin_name}</span>${r.ticker ? `<br><span class="ticker">$${r.ticker}</span>` : ""}</td>
+        <td>${r.chain ? `<span class="chain-chip">${r.chain}</span>` : "—"}</td>
         <td class="num">${fmtUsd(r.marketCap_usd)}</td>
         <td class="num">${fmtUsd(r.liquidity_usd)}</td>
         <td class="num">${fmtPct(r.change_h6_pct)}</td>
-        <td><a class="src-link" href="${r.quelle_url}" target="_blank" rel="noopener">DEXScreener ↗</a></td>
+        <td>${r.quelle_url ? `<a class="src-link" href="${r.quelle_url}" target="_blank" rel="noopener">DEXScreener ↗</a>` : "—"}</td>
         <td class="note">${r.kurznotiz}</td>
         <td class="num">${statusPill(r)}</td>
       </tr>
