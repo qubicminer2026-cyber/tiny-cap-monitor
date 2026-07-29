@@ -1,0 +1,424 @@
+<title>Tiny-Cap Momentum Monitor (Bildungszwecke)</title>
+<style>
+  :root {
+    --paper: #ECEEEA;
+    --paper-raised: #F7F8F5;
+    --ink: #1C1B19;
+    --ink-soft: #55564F;
+    --line: #CBCDC5;
+    --accent: #2B6E6B;
+    --accent-soft: #E4EEED;
+    --warn: #C98A2E;
+    --warn-soft: #F7ECD9;
+    --risk: #B4432E;
+    --risk-soft: #F7E4DF;
+    --good: #4C7A56;
+    --good-soft: #E7EFE7;
+    --shadow: 0 1px 2px rgba(28,27,25,0.06), 0 6px 20px rgba(28,27,25,0.05);
+  }
+  :root[data-theme="dark"] {
+    --paper: #14171A;
+    --paper-raised: #1B1F23;
+    --ink: #EDEFEC;
+    --ink-soft: #A3A79E;
+    --line: #33383D;
+    --accent: #6FBDB6;
+    --accent-soft: #1D2E2D;
+    --warn: #E3AC55;
+    --warn-soft: #332A18;
+    --risk: #E17A63;
+    --risk-soft: #35201B;
+    --good: #7FBE8E;
+    --good-soft: #1E2B21;
+    --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.35);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #14171A;
+      --paper-raised: #1B1F23;
+      --ink: #EDEFEC;
+      --ink-soft: #A3A79E;
+      --line: #33383D;
+      --accent: #6FBDB6;
+      --accent-soft: #1D2E2D;
+      --warn: #E3AC55;
+      --warn-soft: #332A18;
+      --risk: #E17A63;
+      --risk-soft: #35201B;
+      --good: #7FBE8E;
+      --good-soft: #1E2B21;
+      --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.35);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", "Inter", system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1.25rem;
+  }
+  .eyebrow {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  h1 {
+    font-family: Iowan Old Style, "Palatino Linotype", Georgia, ui-serif, serif;
+    font-weight: 600;
+    font-size: clamp(1.6rem, 1.1rem + 1.8vw, 2.35rem);
+    line-height: 1.15;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .lede {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    max-width: 62ch;
+    line-height: 1.5;
+  }
+
+  .hazard {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    background: var(--warn-soft);
+    border: 1px solid color-mix(in srgb, var(--warn) 45%, var(--line));
+    border-left: 4px solid var(--warn);
+    border-radius: 6px;
+    padding: 0.9rem 1.1rem;
+    margin: 1.4rem 0 1.8rem;
+    font-size: 0.87rem;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .hazard .glyph { font-size: 1.1rem; line-height: 1; margin-top: 0.1rem; }
+  .hazard strong { font-weight: 700; }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  .stat {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    box-shadow: var(--shadow);
+  }
+  .stat .label {
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .stat .value {
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 0.2rem;
+  }
+
+  .panel {
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .panel-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .panel-head h2 {
+    font-family: Iowan Old Style, "Palatino Linotype", Georgia, ui-serif, serif;
+    font-size: 1.05rem;
+    margin: 0;
+    font-weight: 600;
+  }
+  .panel-head .hint {
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 880px;
+    font-size: 0.86rem;
+  }
+  thead th {
+    position: sticky;
+    top: 0;
+    background: var(--paper-raised);
+    text-align: left;
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    padding: 0.65rem 0.9rem;
+    border-bottom: 1px solid var(--line);
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  thead th:hover { color: var(--accent); }
+  thead th.sorted::after { content: " ▾"; color: var(--accent); }
+  tbody td {
+    padding: 0.65rem 0.9rem;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: var(--accent-soft); }
+
+  .num {
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .coin-name { font-weight: 600; }
+  .ticker { color: var(--ink-soft); font-family: ui-monospace, monospace; font-size: 0.8em; }
+  .chain-chip {
+    display: inline-block;
+    font-family: ui-monospace, monospace;
+    font-size: 0.7rem;
+    padding: 0.12rem 0.45rem;
+    border-radius: 99px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  .status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: ui-monospace, monospace;
+    font-size: 0.72rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 99px;
+    white-space: nowrap;
+  }
+  .status-pill.ok { background: var(--good-soft); color: var(--good); }
+  .status-pill.pending { background: var(--line); color: var(--ink-soft); }
+  .status-pill.risk { background: var(--risk-soft); color: var(--risk); }
+  .note { color: var(--ink-soft); max-width: 30ch; font-size: 0.82rem; line-height: 1.4; }
+  a.src-link { color: var(--accent); text-decoration: none; font-size: 0.8rem; }
+  a.src-link:hover { text-decoration: underline; }
+
+  .empty-state {
+    padding: 2.5rem 1.25rem;
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+  }
+
+  footer {
+    margin-top: 1.5rem;
+    font-size: 0.76rem;
+    color: var(--ink-soft);
+    font-family: ui-monospace, monospace;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    tbody tr { transition: background-color 0.15s ease; }
+  }
+</style>
+
+<div class="masthead">
+  <span class="eyebrow">Beobachtungs-Log · nicht handelbar</span>
+  <h1>Tiny-Cap Momentum Monitor</h1>
+  <p class="lede">Protokolliert Tiny-Cap-Kryptowerte (Marktkapitalisierung unter $1.000.000), die in einem 6-Stunden-Fenster eine Kursbewegung von +5% bis +10% zeigten. Automatisierter Beobachtungslauf, dreimal täglich (07:00 / 15:00 / 22:00 MEZ).</p>
+</div>
+
+<div class="hazard">
+  <span class="glyph">⚠️</span>
+  <span><strong>Nur zu Beobachtungs- und Bildungszwecken.</strong> Keine Kauf-, Verkaufs- oder Anlageempfehlung. Tiny-Caps unter $1M Marktkapitalisierung sind hochgradig illiquide und leicht manipulierbar (Honeypots, Rug Pulls, Wash-Trading). Historische Kursmuster sagen nichts über zukünftige Entwicklung aus. Alle Daten stammen aus öffentlichen APIs (DEXScreener u.a.) und können fehlerhaft oder veraltet sein.</span>
+</div>
+
+<div class="stats">
+  <div class="stat">
+    <div class="label">Letztes Update</div>
+    <div class="value" id="stat-updated" style="font-size:0.95rem;">29.07.2026, 12:13 MESZ</div>
+  </div>
+  <div class="stat">
+    <div class="label">Läufe gesamt</div>
+    <div class="value" id="stat-runs">2</div>
+  </div>
+  <div class="stat">
+    <div class="label">Einträge im Log</div>
+    <div class="value" id="stat-entries">3</div>
+  </div>
+  <div class="stat">
+    <div class="label">Heutige Kandidaten</div>
+    <div class="value" id="stat-today">3</div>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="panel-head">
+    <h2>Log</h2>
+    <span class="hint">Neueste Einträge zuerst · Spaltenkopf klicken zum Sortieren</span>
+  </div>
+  <div class="table-scroll">
+    <table id="log-table">
+      <thead>
+        <tr>
+          <th data-key="timestamp_iso" class="sorted">Zeitstempel</th>
+          <th data-key="fenster">Fenster</th>
+          <th data-key="coin_name">Coin</th>
+          <th data-key="chain">Chain</th>
+          <th data-key="marketCap_usd">Market Cap</th>
+          <th data-key="liquidity_usd">Liquidität</th>
+          <th data-key="change_h6_pct">6h-Änderung</th>
+          <th>Quelle</th>
+          <th>Kurznotiz</th>
+          <th data-key="nachbeobachtung_pct">Nachbeobachtung</th>
+        </tr>
+      </thead>
+      <tbody id="log-body"></tbody>
+    </table>
+  </div>
+  <div class="empty-state" id="empty-state" hidden>Keine Kandidaten in diesem Fenster gefunden.</div>
+</div>
+
+<footer>tiny-cap-monitor · Datenquelle: DEXScreener öffentliche API · lokal protokolliert unter ClaudeData/tiny-cap-monitor/log.json</footer>
+
+<script>
+  const LOG = [
+    {
+      timestamp_iso: "2026-07-29T12:05:25+02:00",
+      fenster: "Test-Erstlauf (manuell)",
+      coin_name: "Brötchen",
+      ticker: "Brötchen",
+      chain: "solana",
+      marketCap_usd: 847714,
+      liquidity_usd: 119020.51,
+      change_h6_pct: 5.98,
+      quelle_url: "https://dexscreener.com/solana/74hjkm2dqyvj9koqtw4jbs1ujk7uzkhxytjmbxkfcjlk",
+      kurznotiz: "Frisch gelisteter pump.fun-Token, moderates 6h-Momentum im Zielkorridor, Liquidität > $100k vorhanden.",
+      nachbeobachtung_pct: null,
+      nachbeobachtung_status: "ausstehend"
+    },
+    {
+      timestamp_iso: "2026-07-29T12:05:25+02:00",
+      fenster: "Test-Erstlauf (manuell)",
+      coin_name: "PLAY STATE",
+      ticker: "PLYSTT",
+      chain: "solana",
+      marketCap_usd: 2958.74,
+      liquidity_usd: null,
+      change_h6_pct: 7.77,
+      quelle_url: "https://dexscreener.com/solana/ahqsjgufpqiayjgtdqva16m1gg61bksclt812cqze69n",
+      kurznotiz: "Datenqualitäts-Hinweis: Liquiditätsfeld nicht verfügbar über API — extrem niedrige Marktkapitalisierung, sehr hohes Illiquiditätsrisiko.",
+      nachbeobachtung_pct: null,
+      nachbeobachtung_status: "ausstehend"
+    },
+    {
+      timestamp_iso: "2026-07-29T12:13:27+02:00",
+      fenster: "Test-Lauf 12:11 (manuell/Testphase, nicht 07/15/22 Uhr Standardfenster)",
+      coin_name: "6Chicken9",
+      ticker: "POP",
+      chain: "solana",
+      marketCap_usd: 38721,
+      liquidity_usd: 16197.12,
+      change_h6_pct: 6.01,
+      quelle_url: "https://dexscreener.com/solana/1mrwhr8jsszrbwjujdnaff4uacljqrewimdgzhha6cp",
+      kurznotiz: "Frisch gelisteter pump.fun-Token, moderates 6h-Momentum knapp im Zielkorridor, Liquiditaet ca. 16k USD.",
+      nachbeobachtung_pct: null,
+      nachbeobachtung_status: "ausstehend"
+    }
+  ];
+
+  const fmtUsd = (v) => v == null ? "—" : "$" + Number(v).toLocaleString("de-DE", {maximumFractionDigits: 0});
+  const fmtPct = (v) => v == null ? "—" : (v > 0 ? "+" : "") + Number(v).toFixed(2) + "%";
+  const fmtTime = (iso) => {
+    const d = new Date(iso);
+    return d.toLocaleDateString("de-DE") + ", " + d.toLocaleTimeString("de-DE", {hour: "2-digit", minute: "2-digit"});
+  };
+
+  function statusPill(row) {
+    if (row.nachbeobachtung_status === "ausstehend" || !row.nachbeobachtung_status) {
+      return '<span class="status-pill pending">ausstehend</span>';
+    }
+    if (row.liquidity_usd == null || row.liquidity_usd < 1000) {
+      return '<span class="status-pill risk">Datenlücke</span>';
+    }
+    return '<span class="status-pill ok">beobachtet</span>';
+  }
+
+  function render(rows) {
+    const body = document.getElementById("log-body");
+    const empty = document.getElementById("empty-state");
+    if (!rows.length) {
+      body.innerHTML = "";
+      empty.hidden = false;
+      return;
+    }
+    empty.hidden = true;
+    body.innerHTML = rows.map(r => `
+      <tr>
+        <td class="num">${fmtTime(r.timestamp_iso)}</td>
+        <td>${r.fenster}</td>
+        <td><span class="coin-name">${r.coin_name}</span><br><span class="ticker">$${r.ticker}</span></td>
+        <td><span class="chain-chip">${r.chain}</span></td>
+        <td class="num">${fmtUsd(r.marketCap_usd)}</td>
+        <td class="num">${fmtUsd(r.liquidity_usd)}</td>
+        <td class="num">${fmtPct(r.change_h6_pct)}</td>
+        <td><a class="src-link" href="${r.quelle_url}" target="_blank" rel="noopener">DEXScreener ↗</a></td>
+        <td class="note">${r.kurznotiz}</td>
+        <td class="num">${statusPill(r)}</td>
+      </tr>
+    `).join("");
+  }
+
+  let sortKey = "timestamp_iso";
+  let sortDir = -1;
+  function sortAndRender() {
+    const rows = [...LOG].sort((a, b) => {
+      let av = a[sortKey], bv = b[sortKey];
+      if (av == null) av = -Infinity;
+      if (bv == null) bv = -Infinity;
+      if (typeof av === "string" && sortKey !== "timestamp_iso") { av = av.toLowerCase(); bv = String(bv).toLowerCase(); }
+      return av > bv ? sortDir : av < bv ? -sortDir : 0;
+    });
+    render(rows);
+  }
+
+  document.querySelectorAll("thead th[data-key]").forEach(th => {
+    th.addEventListener("click", () => {
+      const key = th.dataset.key;
+      if (sortKey === key) { sortDir *= -1; } else { sortKey = key; sortDir = -1; }
+      document.querySelectorAll("thead th").forEach(x => x.classList.remove("sorted"));
+      th.classList.add("sorted");
+      sortAndRender();
+    });
+  });
+
+  sortAndRender();
+</script>
