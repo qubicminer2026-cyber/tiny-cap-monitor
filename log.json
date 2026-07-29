@@ -11,10 +11,11 @@
     "change_h6_pct": 5.98,
     "quelle_url": "https://dexscreener.com/solana/74hjkm2dqyvj9koqtw4jbs1ujk7uzkhxytjmbxkfcjlk",
     "kurznotiz": "Frisch gelisteter pump.fun-Token, moderates 6h-Momentum im Zielkorridor, Liquidität > $100k vorhanden.",
-    "price_usd_post": 0.0008480,
+    "price_usd_post": 0.000848,
     "price_usd_post_methode": "rekonstruiert (Rohpreis bei Fund nicht live gespeichert, aus Verhältnis Market-Cap-bei-Post / Market-Cap-jetzt zurückgerechnet)",
-    "nachbeobachtung_pct": null,
-    "nachbeobachtung_status": "ausstehend"
+    "nachbeobachtung_pct": -28.96,
+    "nachbeobachtung_status": "beobachtet",
+    "nachbeobachtung_hinweis": "Nachbeobachtung um ca. 23:35 MESZ statt 22:00 Uhr erfasst, da der automatische 22-Uhr-Task heute wegen eines Konfigurationsfehlers nicht gefeuert hat (seit behoben)."
   },
   {
     "timestamp_iso": "2026-07-29T12:05:25+02:00",
@@ -28,10 +29,11 @@
     "change_h6_pct": 7.77,
     "quelle_url": "https://dexscreener.com/solana/ahqsjgufpqiayjgtdqva16m1gg61bksclt812cqze69n",
     "kurznotiz": "Datenqualitäts-Hinweis: Liquiditätsfeld nicht verfügbar über API — extrem niedrige Marktkapitalisierung, sehr hohes Illiquiditätsrisiko.",
-    "price_usd_post": 0.0000029587,
+    "price_usd_post": 2.9587e-06,
     "price_usd_post_methode": "rekonstruiert (Rohpreis bei Fund nicht live gespeichert, aus Verhältnis Market-Cap-bei-Post / Market-Cap-jetzt zurückgerechnet)",
-    "nachbeobachtung_pct": null,
-    "nachbeobachtung_status": "ausstehend"
+    "nachbeobachtung_pct": -7.32,
+    "nachbeobachtung_status": "beobachtet",
+    "nachbeobachtung_hinweis": "Nachbeobachtung um ca. 23:35 MESZ statt 22:00 Uhr erfasst, da der automatische 22-Uhr-Task heute wegen eines Konfigurationsfehlers nicht gefeuert hat (seit behoben)."
   },
   {
     "timestamp_iso": "2026-07-29T12:13:27+02:00",
@@ -45,10 +47,11 @@
     "change_h6_pct": 6.01,
     "quelle_url": "https://dexscreener.com/solana/1mrwhr8jsszrbwjujdnaff4uacljqrewimdgzhha6cp",
     "kurznotiz": "Frisch gelisteter pump.fun-Token, moderates 6h-Momentum knapp im Zielkorridor, Liquiditaet ca. 16k USD.",
-    "price_usd_post": 0.00003975,
+    "price_usd_post": 3.975e-05,
     "price_usd_post_methode": "rekonstruiert (Rohpreis bei Fund nicht live gespeichert, aus Verhältnis Market-Cap-bei-Post / Market-Cap-jetzt zurückgerechnet)",
-    "nachbeobachtung_pct": null,
-    "nachbeobachtung_status": "ausstehend"
+    "nachbeobachtung_pct": 16.03,
+    "nachbeobachtung_status": "beobachtet",
+    "nachbeobachtung_hinweis": "Nachbeobachtung um ca. 23:35 MESZ statt 22:00 Uhr erfasst, da der automatische 22-Uhr-Task heute wegen eines Konfigurationsfehlers nicht gefeuert hat (seit behoben)."
   },
   {
     "timestamp_iso": "2026-07-29T13:17:21+02:00",

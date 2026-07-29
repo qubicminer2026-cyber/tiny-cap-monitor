@@ -305,11 +305,11 @@
 <div class="stats">
   <div class="stat">
     <div class="label">Letztes Update</div>
-    <div class="value" id="stat-updated" style="font-size:0.95rem;">29.07.2026, 13:17 MESZ</div>
+    <div class="value" id="stat-updated" style="font-size:0.95rem;">29.07.2026, 23:35 MESZ (Nachbeobachtung)</div>
   </div>
   <div class="stat">
     <div class="label">Läufe gesamt</div>
-    <div class="value" id="stat-runs">3</div>
+    <div class="value" id="stat-runs">4</div>
   </div>
   <div class="stat">
     <div class="label">Einträge im Log</div>
@@ -360,63 +360,76 @@
 
 <script>
   const LOG = [
-    {
-      timestamp_iso: "2026-07-29T12:05:25+02:00",
-      fenster: "Test-Erstlauf (manuell)",
-      coin_name: "Brötchen",
-      ticker: "Brötchen",
-      chain: "solana",
-      marketCap_usd: 847714,
-      liquidity_usd: 119020.51,
-      change_h6_pct: 5.98,
-      quelle_url: "https://dexscreener.com/solana/74hjkm2dqyvj9koqtw4jbs1ujk7uzkhxytjmbxkfcjlk",
-      kurznotiz: "Frisch gelisteter pump.fun-Token, moderates 6h-Momentum im Zielkorridor, Liquidität > $100k vorhanden.",
-      nachbeobachtung_pct: null,
-      nachbeobachtung_status: "ausstehend"
-    },
-    {
-      timestamp_iso: "2026-07-29T12:05:25+02:00",
-      fenster: "Test-Erstlauf (manuell)",
-      coin_name: "PLAY STATE",
-      ticker: "PLYSTT",
-      chain: "solana",
-      marketCap_usd: 2958.74,
-      liquidity_usd: null,
-      change_h6_pct: 7.77,
-      quelle_url: "https://dexscreener.com/solana/ahqsjgufpqiayjgtdqva16m1gg61bksclt812cqze69n",
-      kurznotiz: "Datenqualitäts-Hinweis: Liquiditätsfeld nicht verfügbar über API — extrem niedrige Marktkapitalisierung, sehr hohes Illiquiditätsrisiko.",
-      nachbeobachtung_pct: null,
-      nachbeobachtung_status: "ausstehend"
-    },
-    {
-      timestamp_iso: "2026-07-29T12:13:27+02:00",
-      fenster: "Test-Lauf 12:11 (manuell/Testphase, nicht 07/15/22 Uhr Standardfenster)",
-      coin_name: "6Chicken9",
-      ticker: "POP",
-      chain: "solana",
-      marketCap_usd: 38721,
-      liquidity_usd: 16197.12,
-      change_h6_pct: 6.01,
-      quelle_url: "https://dexscreener.com/solana/1mrwhr8jsszrbwjujdnaff4uacljqrewimdgzhha6cp",
-      kurznotiz: "Frisch gelisteter pump.fun-Token, moderates 6h-Momentum knapp im Zielkorridor, Liquiditaet ca. 16k USD.",
-      nachbeobachtung_pct: null,
-      nachbeobachtung_status: "ausstehend"
-    },
-    {
-      timestamp_iso: "2026-07-29T13:17:21+02:00",
-      fenster: "Nachmittags-Scan",
-      coin_name: "Keine Kandidaten",
-      ticker: null,
-      chain: null,
-      marketCap_usd: null,
-      liquidity_usd: null,
-      change_h6_pct: null,
-      quelle_url: null,
-      kurznotiz: "DEXScreener token-boosts/token-profiles Kandidatenliste (57 eindeutige Adressen) geprüft: kein Token unter $1M Market Cap lag im 6h-Zielkorridor von +5% bis +10%. Beobachtete Tiny-Caps zeigten überwiegend extreme Ausschläge oder Rückgänge, keine moderate Bewegung im Zielfenster.",
-      nachbeobachtung_pct: null,
-      nachbeobachtung_status: null
-    }
-  ];
+  {
+    "timestamp_iso": "2026-07-29T12:05:25+02:00",
+    "fenster": "Test-Erstlauf (manuell)",
+    "coin_name": "Brötchen",
+    "ticker": "Brötchen",
+    "chain": "solana",
+    "tokenAddress": "9ZtbETDNjnST9Y2zs82FZYy49xUMPgqXRh46YjjRpump",
+    "marketCap_usd": 847714,
+    "liquidity_usd": 119020.51,
+    "change_h6_pct": 5.98,
+    "quelle_url": "https://dexscreener.com/solana/74hjkm2dqyvj9koqtw4jbs1ujk7uzkhxytjmbxkfcjlk",
+    "kurznotiz": "Frisch gelisteter pump.fun-Token, moderates 6h-Momentum im Zielkorridor, Liquidität > $100k vorhanden.",
+    "price_usd_post": 0.000848,
+    "price_usd_post_methode": "rekonstruiert (Rohpreis bei Fund nicht live gespeichert, aus Verhältnis Market-Cap-bei-Post / Market-Cap-jetzt zurückgerechnet)",
+    "nachbeobachtung_pct": -28.96,
+    "nachbeobachtung_status": "beobachtet",
+    "nachbeobachtung_hinweis": "Nachbeobachtung um ca. 23:35 MESZ statt 22:00 Uhr erfasst, da der automatische 22-Uhr-Task heute wegen eines Konfigurationsfehlers nicht gefeuert hat (seit behoben)."
+  },
+  {
+    "timestamp_iso": "2026-07-29T12:05:25+02:00",
+    "fenster": "Test-Erstlauf (manuell)",
+    "coin_name": "PLAY STATE",
+    "ticker": "PLYSTT",
+    "chain": "solana",
+    "tokenAddress": "9gAMsLpkQaxaHFCSxhgg4zMmnAAcygAqVR9ZzStzpump",
+    "marketCap_usd": 2958.74,
+    "liquidity_usd": null,
+    "change_h6_pct": 7.77,
+    "quelle_url": "https://dexscreener.com/solana/ahqsjgufpqiayjgtdqva16m1gg61bksclt812cqze69n",
+    "kurznotiz": "Datenqualitäts-Hinweis: Liquiditätsfeld nicht verfügbar über API — extrem niedrige Marktkapitalisierung, sehr hohes Illiquiditätsrisiko.",
+    "price_usd_post": 2.9587e-06,
+    "price_usd_post_methode": "rekonstruiert (Rohpreis bei Fund nicht live gespeichert, aus Verhältnis Market-Cap-bei-Post / Market-Cap-jetzt zurückgerechnet)",
+    "nachbeobachtung_pct": -7.32,
+    "nachbeobachtung_status": "beobachtet",
+    "nachbeobachtung_hinweis": "Nachbeobachtung um ca. 23:35 MESZ statt 22:00 Uhr erfasst, da der automatische 22-Uhr-Task heute wegen eines Konfigurationsfehlers nicht gefeuert hat (seit behoben)."
+  },
+  {
+    "timestamp_iso": "2026-07-29T12:13:27+02:00",
+    "fenster": "Test-Lauf 12:11 (manuell/Testphase, nicht 07/15/22 Uhr Standardfenster)",
+    "coin_name": "6Chicken9",
+    "ticker": "POP",
+    "chain": "solana",
+    "tokenAddress": "4sxxEHW6XqX5YBYs29f1p2RhR7afXFS8wQWcMYQVpump",
+    "marketCap_usd": 38721,
+    "liquidity_usd": 16197.12,
+    "change_h6_pct": 6.01,
+    "quelle_url": "https://dexscreener.com/solana/1mrwhr8jsszrbwjujdnaff4uacljqrewimdgzhha6cp",
+    "kurznotiz": "Frisch gelisteter pump.fun-Token, moderates 6h-Momentum knapp im Zielkorridor, Liquiditaet ca. 16k USD.",
+    "price_usd_post": 3.975e-05,
+    "price_usd_post_methode": "rekonstruiert (Rohpreis bei Fund nicht live gespeichert, aus Verhältnis Market-Cap-bei-Post / Market-Cap-jetzt zurückgerechnet)",
+    "nachbeobachtung_pct": 16.03,
+    "nachbeobachtung_status": "beobachtet",
+    "nachbeobachtung_hinweis": "Nachbeobachtung um ca. 23:35 MESZ statt 22:00 Uhr erfasst, da der automatische 22-Uhr-Task heute wegen eines Konfigurationsfehlers nicht gefeuert hat (seit behoben)."
+  },
+  {
+    "timestamp_iso": "2026-07-29T13:17:21+02:00",
+    "fenster": "Nachmittags-Scan",
+    "coin_name": "Keine Kandidaten",
+    "ticker": null,
+    "chain": null,
+    "tokenAddress": null,
+    "marketCap_usd": null,
+    "liquidity_usd": null,
+    "change_h6_pct": null,
+    "quelle_url": null,
+    "kurznotiz": "DEXScreener token-boosts/token-profiles Kandidatenliste (57 eindeutige Adressen, Batch-Abfrage via /latest/dex/tokens/) geprüft: kein Token unter $1M Market Cap lag im 6h-Zielkorridor von +5% bis +10%. Die als 'geboostet' gelisteten Tiny-Caps zeigten überwiegend extreme Ausschläge (teils mehrere hundert Prozent) oder deutliche Rückgänge, keine moderate Bewegung im Zielfenster.",
+    "nachbeobachtung_pct": null,
+    "nachbeobachtung_status": null
+  }
+];
 
   const fmtUsd = (v) => v == null ? "—" : "$" + Number(v).toLocaleString("de-DE", {maximumFractionDigits: 0});
   const fmtPct = (v) => v == null ? "—" : (v > 0 ? "+" : "") + Number(v).toFixed(2) + "%";
