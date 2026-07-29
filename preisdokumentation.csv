@@ -1,0 +1,4 @@
+Datum,Fenster,Coin,Ticker,Chain,Post_Zeit,Kurs_bei_Post_USD,Kurs_bei_Post_Methode,Kurs_22Uhr_USD,Veraenderung_Prozent,Status
+2026-07-29,Test-Erstlauf (manuell),Broetchen,Broetchen,solana,12:05,0.0008480,rekonstruiert,,,ausstehend (22-Uhr-Lauf steht noch aus)
+2026-07-29,Test-Erstlauf (manuell),PLAY STATE,PLYSTT,solana,12:05,0.0000029587,rekonstruiert,,,ausstehend (22-Uhr-Lauf steht noch aus)
+2026-07-29,Test-Lauf 12:11,6Chicken9,POP,solana,12:13,0.00003975,rekonstruiert,,,ausstehend (22-Uhr-Lauf steht noch aus)
