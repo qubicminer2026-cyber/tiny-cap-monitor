@@ -238,6 +238,47 @@
     font-size: 0.9rem;
   }
 
+  .hitrate-panel {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.1rem 1.25rem;
+  }
+  .hitrate-nums {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .hitrate-nums .stat .value.good { color: var(--good); }
+  .hitrate-nums .stat .value.risk { color: var(--risk); }
+  .hitrate-bar-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 220px;
+  }
+  .hitrate-bar-legend {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+    font-family: ui-monospace, monospace;
+  }
+  .hitrate-bar-legend span::before {
+    content: "●";
+    margin-right: 0.3rem;
+  }
+  .hitrate-bar-legend .lg-good::before { color: var(--good); }
+  .hitrate-bar-legend .lg-risk::before { color: var(--risk); }
+  .hitrate-bar-legend .lg-neutral::before { color: var(--ink-soft); }
+  #hitrate-canvas { border-radius: 6px; display: block; }
+  .hitrate-empty {
+    padding: 0.5rem 0;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+  }
+
   footer {
     margin-top: 1.5rem;
     font-size: 0.76rem;
@@ -278,6 +319,14 @@
     <div class="label">Heutige Kandidaten</div>
     <div class="value" id="stat-today">3</div>
   </div>
+</div>
+
+<div class="panel" style="margin-bottom: 1.5rem;">
+  <div class="panel-head">
+    <h2>Trefferquote (abgeschlossene Beobachtungen)</h2>
+    <span class="hint">Post-Kurs vs. 22-Uhr-Kurs, alle bisher abgeschlossenen Fälle</span>
+  </div>
+  <div id="hitrate-body"></div>
 </div>
 
 <div class="panel">
@@ -411,6 +460,72 @@
     `).join("");
   }
 
+  function renderHitrate() {
+    const done = LOG.filter(r => r.nachbeobachtung_status === "beobachtet" && typeof r.nachbeobachtung_pct === "number");
+    const wrap = document.getElementById("hitrate-body");
+    if (!done.length) {
+      wrap.innerHTML = '<div class="hitrate-empty">Noch keine abgeschlossenen Beobachtungen — der 22-Uhr-Lauf ergänzt Post-Kurs-vs-22-Uhr-Vergleiche automatisch, sobald der erste Tag durchgelaufen ist.</div>';
+      return;
+    }
+    const pos = done.filter(r => r.nachbeobachtung_pct > 0);
+    const neg = done.filter(r => r.nachbeobachtung_pct < 0);
+    const neu = done.filter(r => r.nachbeobachtung_pct === 0);
+    const avg = done.reduce((s, r) => s + r.nachbeobachtung_pct, 0) / done.length;
+
+    wrap.innerHTML = `
+      <div class="hitrate-panel">
+        <div class="hitrate-nums">
+          <div class="stat"><div class="label">Fälle gesamt</div><div class="value">${done.length}</div></div>
+          <div class="stat"><div class="label">Positiv</div><div class="value good">${pos.length}</div></div>
+          <div class="stat"><div class="label">Negativ</div><div class="value risk">${neg.length}</div></div>
+          <div class="stat"><div class="label">Ø Veränderung</div><div class="value ${avg >= 0 ? 'good' : 'risk'}">${fmtPct(avg)}</div></div>
+        </div>
+        <div class="hitrate-bar-wrap">
+          <canvas id="hitrate-canvas" width="240" height="28"></canvas>
+          <div class="hitrate-bar-legend">
+            <span class="lg-good">positiv</span>
+            <span class="lg-risk">negativ</span>
+            ${neu.length ? '<span class="lg-neutral">unverändert</span>' : ""}
+          </div>
+        </div>
+      </div>
+    `;
+
+    const canvas = document.getElementById("hitrate-canvas");
+    const ctx = canvas.getContext("2d");
+    const dpr = window.devicePixelRatio || 1;
+    const w = canvas.width, h = canvas.height;
+    canvas.width = w * dpr; canvas.height = h * dpr;
+    canvas.style.width = w + "px"; canvas.style.height = h + "px";
+    ctx.scale(dpr, dpr);
+
+    const styles = getComputedStyle(document.documentElement);
+    const cGood = styles.getPropertyValue("--good").trim();
+    const cRisk = styles.getPropertyValue("--risk").trim();
+    const cNeutral = styles.getPropertyValue("--ink-soft").trim();
+
+    const total = done.length;
+    const radius = 5;
+    ctx.save();
+    ctx.beginPath();
+    ctx.moveTo(radius, 0);
+    ctx.arcTo(w, 0, w, h, radius);
+    ctx.arcTo(w, h, 0, h, radius);
+    ctx.arcTo(0, h, 0, 0, radius);
+    ctx.arcTo(0, 0, w, 0, radius);
+    ctx.closePath();
+    ctx.clip();
+
+    let x = 0;
+    const posW = (pos.length / total) * w;
+    const negW = (neg.length / total) * w;
+    const neuW = w - posW - negW;
+    ctx.fillStyle = cGood; ctx.fillRect(x, 0, posW, h); x += posW;
+    ctx.fillStyle = cNeutral; ctx.fillRect(x, 0, neuW, h); x += neuW;
+    ctx.fillStyle = cRisk; ctx.fillRect(x, 0, negW, h);
+    ctx.restore();
+  }
+
   let sortKey = "timestamp_iso";
   let sortDir = -1;
   function sortAndRender() {
@@ -435,4 +550,5 @@
   });
 
   sortAndRender();
+  renderHitrate();
 </script>
