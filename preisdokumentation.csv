@@ -4,3 +4,4 @@ Datum,Fenster,Coin,Ticker,Chain,Post_Zeit,Kurs_bei_Post_USD,Kurs_bei_Post_Method
 2026-07-29,Test-Lauf 12:11,6Chicken9,POP,solana,12:13,0.00003975,rekonstruiert,0.00004612,16.03,beobachtet (Nachbeobachtung ca. 23:35 statt 22:00 - Task-Fehler heute, siehe Hinweis)
 2026-07-30,Morgen-Scan,Broetchen,Broetchen,solana,08:33,0.0006624,live,,,ausstehend (22-Uhr-Lauf steht noch aus)
 2026-07-30,Morgen-Scan,RebootCat,REBOOT,solana,08:33,0.00007197,live,,,ausstehend (22-Uhr-Lauf steht noch aus)
+2026-07-30,Nachmittags-Scan,frink,frink,solana,15:03,0.000009772,live,,,ausstehend (22-Uhr-Lauf steht noch aus)
