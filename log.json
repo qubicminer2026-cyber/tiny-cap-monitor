@@ -82,8 +82,8 @@
     "price_usd_post_methode": "live",
     "quelle_url": "https://dexscreener.com/solana/74hjkm2dqyvj9koqtw4jbs1ujk7uzkhxytjmbxkfcjlk",
     "kurznotiz": "Bereits am 2026-07-29 beobachteter Coin, erneut im Zielkorridor mit soliden 105k USD Liquiditaet.",
-    "nachbeobachtung_pct": null,
-    "nachbeobachtung_status": null
+    "nachbeobachtung_pct": -17.65,
+    "nachbeobachtung_status": "beobachtet"
   },
   {
     "timestamp_iso": "2026-07-30T08:33:20+02:00",
@@ -99,8 +99,8 @@
     "price_usd_post_methode": "live",
     "quelle_url": "https://dexscreener.com/solana/6v4bc3zjhmuqaqqmvcyo4gftmyo5yxgjefbsn6xpafzn",
     "kurznotiz": "Frisch gelisteter pump.fun-Token, moderates 6h-Momentum im Zielkorridor, Liquiditaet ca. 19k USD.",
-    "nachbeobachtung_pct": null,
-    "nachbeobachtung_status": null
+    "nachbeobachtung_pct": 13.37,
+    "nachbeobachtung_status": "beobachtet"
   },
   {
     "timestamp_iso": "2026-07-30T15:03:09+02:00",
@@ -116,6 +116,23 @@
     "price_usd_post_methode": "live",
     "quelle_url": "https://dexscreener.com/solana/6zntr342kdkxhe2iutw9t7kqzesyvsjq31xkqis8kyjh",
     "kurznotiz": "Frisch gelisteter pump.fun-Token, sehr niedrige Marktkapitalisierung (unter 10k USD) und entsprechend niedrige Liquiditaet (ca. 7.3k USD) - hohes Illiquiditaetsrisiko, 6h-Momentum knapp im oberen Zielkorridor.",
+    "nachbeobachtung_pct": -7.78,
+    "nachbeobachtung_status": "beobachtet"
+  },
+  {
+    "timestamp_iso": "2026-07-30T22:00:47+02:00",
+    "fenster": "Abend-Scan",
+    "coin_name": "Keine Kandidaten",
+    "ticker": null,
+    "chain": null,
+    "tokenAddress": null,
+    "marketCap_usd": null,
+    "liquidity_usd": null,
+    "change_h6_pct": null,
+    "price_usd_post": null,
+    "price_usd_post_methode": null,
+    "quelle_url": null,
+    "kurznotiz": "DEXScreener token-boosts/token-profiles Kandidatenliste (54 eindeutige Adressen, Batch-Abfrage via /latest/dex/tokens/) geprueft: kein Token unter $1M Market Cap mit Liquiditaet >= $1000 lag im 6h-Zielkorridor von +5% bis +10%.",
     "nachbeobachtung_pct": null,
     "nachbeobachtung_status": null
   }
