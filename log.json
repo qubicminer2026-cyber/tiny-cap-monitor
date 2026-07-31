@@ -150,8 +150,8 @@
     "price_usd_post_methode": "live",
     "quelle_url": "https://dexscreener.com/solana/2kievyxfshv6jyzv3bkaw5r1bnebyr8sfktmaq2a44in",
     "kurznotiz": "Frisch gelisteter pump.fun/pumpswap-Token, konsistentes Momentum (h1 +1.49%, h6 +6.32%, h24 +11.08%), solide Liquiditaet ca. 17k USD.",
-    "nachbeobachtung_pct": null,
-    "nachbeobachtung_status": null
+    "nachbeobachtung_pct": -7.24,
+    "nachbeobachtung_status": "beobachtet"
   },
   {
     "timestamp_iso": "2026-07-31T07:04:29+02:00",
@@ -167,6 +167,40 @@
     "price_usd_post_methode": "live",
     "quelle_url": "https://dexscreener.com/solana/3qpj4xa8ecnqa4fuivpirdo2mkstudqgwikjukbpmbly",
     "kurznotiz": "Datenqualitaets-Hinweis: Liquiditaetsfeld nicht verfuegbar ueber API - extrem niedrige Marktkapitalisierung (~$2.5k), sehr hohes Illiquiditaetsrisiko, h6-Handel stark verkaufslastig (1165 Buys / 7901 Sells).",
+    "nachbeobachtung_pct": -12.37,
+    "nachbeobachtung_status": "beobachtet"
+  },
+  {
+    "timestamp_iso": "2026-07-31T15:05:21+02:00",
+    "fenster": "Nachmittags-Scan",
+    "coin_name": "Safevano Wallet",
+    "ticker": "SAFEVANO",
+    "chain": "robinhood",
+    "tokenAddress": "0xe6613D2Bbd5f5C5bb203C36eE414ffaA4a47a977",
+    "marketCap_usd": 197584,
+    "liquidity_usd": 34686.5,
+    "change_h6_pct": 5.4,
+    "price_usd_post": 0.01796,
+    "price_usd_post_methode": "live",
+    "quelle_url": "https://dexscreener.com/robinhood/0x275850ea46f92203d345364a2d138048d182fb35",
+    "kurznotiz": "Uniswap-Paar auf der Chain 'robinhood', solide Liquiditaet ca. 35k USD, gesundes Handelsverhaeltnis (51 Buys / 38 Sells in h6), h6-Momentum knapp im unteren Zielkorridor (h1 nahezu flach bei +0.03%, h24 +15.11%).",
+    "nachbeobachtung_pct": -1.73,
+    "nachbeobachtung_status": "beobachtet"
+  },
+  {
+    "timestamp_iso": "2026-07-31T22:00:42+02:00",
+    "fenster": "Abend-Scan",
+    "coin_name": "Keine Kandidaten",
+    "ticker": null,
+    "chain": null,
+    "tokenAddress": null,
+    "marketCap_usd": null,
+    "liquidity_usd": null,
+    "change_h6_pct": null,
+    "price_usd_post": null,
+    "price_usd_post_methode": null,
+    "quelle_url": null,
+    "kurznotiz": "DEXScreener token-boosts/token-profiles Kandidatenliste (58 eindeutige Adressen, Batch-Abfrage via /latest/dex/tokens/) geprueft: kein Token unter $1M Market Cap mit Liquiditaet >= $1000 lag im 6h-Zielkorridor von +5% bis +10%.",
     "nachbeobachtung_pct": null,
     "nachbeobachtung_status": null
   }
