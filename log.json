@@ -135,5 +135,39 @@
     "kurznotiz": "DEXScreener token-boosts/token-profiles Kandidatenliste (54 eindeutige Adressen, Batch-Abfrage via /latest/dex/tokens/) geprueft: kein Token unter $1M Market Cap mit Liquiditaet >= $1000 lag im 6h-Zielkorridor von +5% bis +10%.",
     "nachbeobachtung_pct": null,
     "nachbeobachtung_status": null
+  },
+  {
+    "timestamp_iso": "2026-07-31T07:04:29+02:00",
+    "fenster": "Morgen-Scan",
+    "coin_name": "Mad Fuel",
+    "ticker": "MFUEL",
+    "chain": "solana",
+    "tokenAddress": "7YEPtrYqRgTgQuXtvtx18Qhd2HsA1VFBUJRHQ5dJpump",
+    "marketCap_usd": 35189,
+    "liquidity_usd": 16813.6,
+    "change_h6_pct": 6.32,
+    "price_usd_post": 3.7e-05,
+    "price_usd_post_methode": "live",
+    "quelle_url": "https://dexscreener.com/solana/2kievyxfshv6jyzv3bkaw5r1bnebyr8sfktmaq2a44in",
+    "kurznotiz": "Frisch gelisteter pump.fun/pumpswap-Token, konsistentes Momentum (h1 +1.49%, h6 +6.32%, h24 +11.08%), solide Liquiditaet ca. 17k USD.",
+    "nachbeobachtung_pct": null,
+    "nachbeobachtung_status": null
+  },
+  {
+    "timestamp_iso": "2026-07-31T07:04:29+02:00",
+    "fenster": "Morgen-Scan",
+    "coin_name": "Dottie the Dwarf",
+    "ticker": "DOTTIE",
+    "chain": "solana",
+    "tokenAddress": "361toEhZNJW3zvaZaiGBmZjq5y9HVo4BNmwr6pRepump",
+    "marketCap_usd": 2473.86,
+    "liquidity_usd": null,
+    "change_h6_pct": 9.75,
+    "price_usd_post": 2.473e-06,
+    "price_usd_post_methode": "live",
+    "quelle_url": "https://dexscreener.com/solana/3qpj4xa8ecnqa4fuivpirdo2mkstudqgwikjukbpmbly",
+    "kurznotiz": "Datenqualitaets-Hinweis: Liquiditaetsfeld nicht verfuegbar ueber API - extrem niedrige Marktkapitalisierung (~$2.5k), sehr hohes Illiquiditaetsrisiko, h6-Handel stark verkaufslastig (1165 Buys / 7901 Sells).",
+    "nachbeobachtung_pct": null,
+    "nachbeobachtung_status": null
   }
 ]
