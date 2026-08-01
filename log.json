@@ -218,8 +218,8 @@
     "price_usd_post_methode": "live",
     "quelle_url": "https://dexscreener.com/robinhood/0x20881dfa8b8e775e26fbc20ca3c9824aede2c61c1980d66352ad03fc8ecc0ed6",
     "kurznotiz": "Solide Liquiditaet ca. 2.4k USD, gesundes Handelsverhaeltnis (29 Buys / 19 Sells in h6), h6- und h24-Aenderung identisch (+7.47%) - Momentum konzentriert im aktuellen Fenster.",
-    "nachbeobachtung_pct": null,
-    "nachbeobachtung_status": null
+    "nachbeobachtung_pct": 0.0,
+    "nachbeobachtung_status": "beobachtet"
   },
   {
     "timestamp_iso": "2026-08-01T07:04:39+02:00",
@@ -235,8 +235,8 @@
     "price_usd_post_methode": "live",
     "quelle_url": "https://dexscreener.com/solana/sgjnulidigguaxzw1jgwtl638zmcte7krgpvrblx374",
     "kurznotiz": "Liquiditaet knapp ueber Mindestschwelle (~1.26k USD), gesundes Handelsverhaeltnis (30 Buys / 19 Sells in h6), h1 nahezu flach (+0.94%), h24 deutlich hoeher (+21.31%) - moeglicherweise Teil eines laengeren Trends.",
-    "nachbeobachtung_pct": null,
-    "nachbeobachtung_status": null
+    "nachbeobachtung_pct": -10.4,
+    "nachbeobachtung_status": "beobachtet"
   },
   {
     "timestamp_iso": "2026-08-01T15:01:57+02:00",
@@ -252,6 +252,40 @@
     "price_usd_post_methode": "live",
     "quelle_url": "https://dexscreener.com/solana/c1v6yumqijuyffeja6n96gdakpgvtcmzkvezotqmzha9",
     "kurznotiz": "Frisch aktiver Solana-Token, solide Liquiditaet ca. 33k USD, 6h-Momentum im Zielkorridor. Ein zweiter Kandidat ('You're Cooked', ~k Market Cap) wurde wegen fehlender Liquiditaetsdaten (Datenqualitaets-Hinweis) ausgeschlossen.",
+    "nachbeobachtung_pct": 5.88,
+    "nachbeobachtung_status": "beobachtet"
+  },
+  {
+    "timestamp_iso": "2026-08-01T22:02:32+02:00",
+    "fenster": "Abend-Scan",
+    "coin_name": "Fapcoin",
+    "ticker": "Fapcoin",
+    "chain": "solana",
+    "tokenAddress": "8vGr1eX9vfpootWiUPYa5kYoGx9bTuRy2Xc4dNMrpump",
+    "marketCap_usd": 461065,
+    "liquidity_usd": 64917.22,
+    "change_h6_pct": 9.79,
+    "price_usd_post": 0.0004654,
+    "price_usd_post_methode": "live",
+    "quelle_url": "https://dexscreener.com/solana/aypfy111g9nt1jvunymtjd9is2m8c3pbveosmx9echeu",
+    "kurznotiz": "Solide Liquiditaet ca. 65k USD, konsistentes Momentum ueber die Zeitfenster (h1 +1.01%, h6 +9.79%, h24 +17.72%) - kein abrupter Einzelspike, eher laengerer Aufwaertstrend.",
+    "nachbeobachtung_pct": null,
+    "nachbeobachtung_status": null
+  },
+  {
+    "timestamp_iso": "2026-08-01T22:02:32+02:00",
+    "fenster": "Abend-Scan",
+    "coin_name": "The Border Patrol Agent",
+    "ticker": "ORCA",
+    "chain": "solana",
+    "tokenAddress": "ExnrUCBbfnoK6n5r2XaT5XcCATF2npbxFRE9vGFqpump",
+    "marketCap_usd": 31831,
+    "liquidity_usd": 12771.98,
+    "change_h6_pct": 9.46,
+    "price_usd_post": 0.00003258,
+    "price_usd_post_methode": "live",
+    "quelle_url": "https://dexscreener.com/solana/hqmhhjsxhhnavrctcmfmmce4wp7sew2iutscbxgc8gpj",
+    "kurznotiz": "Liquiditaet ca. 12.8k USD, sehr hohes Handelsvolumen (13882 Buys / 11786 Sells in h6), h1 (+21.97%) deutlich hoeher als h6 (+9.46%) - Hinweis auf kurzfristige Volatilitaet/Teilkorrektur innerhalb des Beobachtungsfensters.",
     "nachbeobachtung_pct": null,
     "nachbeobachtung_status": null
   }
