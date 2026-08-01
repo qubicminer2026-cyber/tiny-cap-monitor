@@ -237,5 +237,22 @@
     "kurznotiz": "Liquiditaet knapp ueber Mindestschwelle (~1.26k USD), gesundes Handelsverhaeltnis (30 Buys / 19 Sells in h6), h1 nahezu flach (+0.94%), h24 deutlich hoeher (+21.31%) - moeglicherweise Teil eines laengeren Trends.",
     "nachbeobachtung_pct": null,
     "nachbeobachtung_status": null
+  },
+  {
+    "timestamp_iso": "2026-08-01T15:01:57+02:00",
+    "fenster": "Nachmittags-Scan",
+    "coin_name": "bleh cat",
+    "ticker": ":p",
+    "chain": "solana",
+    "tokenAddress": "8izw4XNQk4RuJtH88wc1EKQ4RLqGiUqKXZUTS51Apump",
+    "marketCap_usd": 199643,
+    "liquidity_usd": 33083.5,
+    "change_h6_pct": 8.35,
+    "price_usd_post": 0.0002024,
+    "price_usd_post_methode": "live",
+    "quelle_url": "https://dexscreener.com/solana/c1v6yumqijuyffeja6n96gdakpgvtcmzkvezotqmzha9",
+    "kurznotiz": "Frisch aktiver Solana-Token, solide Liquiditaet ca. 33k USD, 6h-Momentum im Zielkorridor. Ein zweiter Kandidat ('You're Cooked', ~k Market Cap) wurde wegen fehlender Liquiditaetsdaten (Datenqualitaets-Hinweis) ausgeschlossen.",
+    "nachbeobachtung_pct": null,
+    "nachbeobachtung_status": null
   }
 ]
