@@ -8,3 +8,5 @@ Datum,Fenster,Coin,Ticker,Chain,Post_Zeit,Kurs_bei_Post_USD,Kurs_bei_Post_Method
 2026-07-31,Morgen-Scan,Mad Fuel,MFUEL,solana,07:04,0.00003700,live,3.432e-05,-7.24,beobachtet
 2026-07-31,Morgen-Scan,Dottie the Dwarf,DOTTIE,solana,07:04,0.000002473,live,2.167e-06,-12.37,beobachtet
 2026-07-31,Nachmittags-Scan,Safevano Wallet,SAFEVANO,robinhood,15:05,0.01796,live,0.01765,-1.73,beobachtet
+2026-08-01,Morgen-Scan,Just Imagine,IMAGINE,robinhood,07:04,0.00005980,live,,,ausstehend (22-Uhr-Lauf steht noch aus)
+2026-08-01,Morgen-Scan,Proof Of Bagwork,POB,solana,07:04,0.00008896,live,,,ausstehend (22-Uhr-Lauf steht noch aus)
