@@ -305,5 +305,39 @@
     "kurznotiz": "Solide Liquiditaet ca. 32.7k USD, moderates 6h-Momentum knapp im Zielkorridor (h24 +4.22%, etwas schwaecher als h6 - kein Einzelspike). Handelsvolumen im 6h-Fenster mit ca. 993 USD und 13 Buys/10 Sells eher duenn, trotz Marktkapitalisierung ~179k. War der einzige Kandidat aus 53 gepruefte Adressen, der den Liquiditaets- und Zielkorridor-Filter erfuellte.",
     "nachbeobachtung_pct": null,
     "nachbeobachtung_status": null
+  },
+  {
+    "timestamp_iso": "2026-08-02T15:03:11+02:00",
+    "fenster": "Nachmittags-Scan",
+    "coin_name": "BRICKTON",
+    "ticker": "BRICK",
+    "chain": "solana",
+    "tokenAddress": "8Byg9wi43TNzgJpYta6UXxPz3LPe8v6ZwvmWWoWQpump",
+    "marketCap_usd": 494537,
+    "liquidity_usd": 61521.58,
+    "change_h6_pct": 5.13,
+    "price_usd_post": 0.0004965,
+    "price_usd_post_methode": "live",
+    "quelle_url": "https://dexscreener.com/solana/dbrvbrlni7dk9vqqffn9nel43lbadf5ejydjnsilqwaj",
+    "kurznotiz": "Solide Liquiditaet ca. 61.5k USD, sehr ausgeglichenes Handelsverhaeltnis (7307 Buys / 7223 Sells in h6). h1 (-3.63%) und h24 (-2.76%) negativ, d.h. der Anstieg lag frueher im 6h-Fenster und hat sich seither wieder etwas abgeschwaecht. Einziger Kandidat aus 56 geprueften DEXScreener-Adressen im Zielkorridor.",
+    "nachbeobachtung_pct": null,
+    "nachbeobachtung_status": null
+  },
+  {
+    "timestamp_iso": "2026-08-02T15:03:11+02:00",
+    "fenster": "Nachmittags-Scan",
+    "coin_name": "Litas",
+    "ticker": "LITAS",
+    "chain": "ethereum",
+    "tokenAddress": "0xFA63503F9e61fd59Cbea137C122Fa55c2dafF14a",
+    "marketCap_usd": 150111.47,
+    "liquidity_usd": null,
+    "change_h6_pct": null,
+    "price_usd_post": 0.01358717,
+    "price_usd_post_methode": "live",
+    "quelle_url": "https://cryptorank.io/price/litas-io",
+    "kurznotiz": "Quelle: CryptoRank (24h-Aenderung +32.30%, kein 6h-Feld verfuegbar). Volumen/Marktkap-Verhaeltnis ca. 0.58 - mit Abstand plausibelstes Verhaeltnis unter 33 gepruefte CryptoRank-Kandidaten im 24h-Zielfenster (uebrige zeigten Verhaeltnisse bis zum tausendfachen Volumen relativ zur Marktkap, Hinweis auf moegliches Wash-Trading, daher ausgeschlossen). Datenqualitaets-Hinweis: API markiert das Feld 'marketDataNotAvailable' als true, obwohl Preis-/Volumendaten vorhanden sind - Herkunft/Aktualitaet dieser Daten laut CryptoRank nicht offiziell dokumentiert. ATH-Marktkap lag im Nov. 2025 bei ca. 4.28M USD, seither deutlicher Rueckgang auf aktuell ca. 150k USD.",
+    "nachbeobachtung_pct": null,
+    "nachbeobachtung_status": null
   }
 ]
