@@ -218,7 +218,7 @@
     "price_usd_post_methode": "live",
     "quelle_url": "https://dexscreener.com/robinhood/0x20881dfa8b8e775e26fbc20ca3c9824aede2c61c1980d66352ad03fc8ecc0ed6",
     "kurznotiz": "Solide Liquiditaet ca. 2.4k USD, gesundes Handelsverhaeltnis (29 Buys / 19 Sells in h6), h6- und h24-Aenderung identisch (+7.47%) - Momentum konzentriert im aktuellen Fenster.",
-    "nachbeobachtung_pct": 0.0,
+    "nachbeobachtung_pct": 0,
     "nachbeobachtung_status": "beobachtet"
   },
   {
@@ -286,6 +286,23 @@
     "price_usd_post_methode": "live",
     "quelle_url": "https://dexscreener.com/solana/hqmhhjsxhhnavrctcmfmmce4wp7sew2iutscbxgc8gpj",
     "kurznotiz": "Liquiditaet ca. 12.8k USD, sehr hohes Handelsvolumen (13882 Buys / 11786 Sells in h6), h1 (+21.97%) deutlich hoeher als h6 (+9.46%) - Hinweis auf kurzfristige Volatilitaet/Teilkorrektur innerhalb des Beobachtungsfensters.",
+    "nachbeobachtung_pct": null,
+    "nachbeobachtung_status": null
+  },
+  {
+    "timestamp_iso": "2026-08-02T07:01:35+02:00",
+    "fenster": "Morgen-Scan",
+    "coin_name": "LUNA CLASSIC",
+    "ticker": "LUNC",
+    "chain": "solana",
+    "tokenAddress": "3zKhzZhbfU2wgpaTwNTL6tietudCQFZFC9c3MuNRpump",
+    "marketCap_usd": 178572,
+    "liquidity_usd": 32740.26,
+    "change_h6_pct": 5.57,
+    "price_usd_post": 0.0001785,
+    "price_usd_post_methode": "live",
+    "quelle_url": "https://dexscreener.com/solana/ardjvvx3nswprcqk4fo7abaaoel2oxgghzabbujnj7go",
+    "kurznotiz": "Solide Liquiditaet ca. 32.7k USD, moderates 6h-Momentum knapp im Zielkorridor (h24 +4.22%, etwas schwaecher als h6 - kein Einzelspike). Handelsvolumen im 6h-Fenster mit ca. 993 USD und 13 Buys/10 Sells eher duenn, trotz Marktkapitalisierung ~179k. War der einzige Kandidat aus 53 gepruefte Adressen, der den Liquiditaets- und Zielkorridor-Filter erfuellte.",
     "nachbeobachtung_pct": null,
     "nachbeobachtung_status": null
   }

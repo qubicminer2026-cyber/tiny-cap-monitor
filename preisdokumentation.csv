@@ -13,3 +13,4 @@ Datum,Fenster,Coin,Ticker,Chain,Post_Zeit,Kurs_bei_Post_USD,Kurs_bei_Post_Method
 2026-08-01,Nachmittags-Scan,bleh cat,:p,solana,15:01,0.0002024,live,0.0002143,5.88,beobachtet
 2026-08-01,Abend-Scan,Fapcoin,Fapcoin,solana,22:02,0.0004654,live,,,"gefunden (Abend-Scan, kein weiterer Nachbeobachtungslauf im Skill vorgesehen)"
 2026-08-01,Abend-Scan,The Border Patrol Agent,ORCA,solana,22:02,0.00003258,live,,,"gefunden (Abend-Scan, kein weiterer Nachbeobachtungslauf im Skill vorgesehen)"
+2026-08-02,Morgen-Scan,LUNA CLASSIC,LUNC,solana,07:01,0.0001785,live,,,ausstehend (22-Uhr-Lauf steht noch aus)
