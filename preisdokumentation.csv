@@ -16,7 +16,7 @@ Datum,Fenster,Coin,Ticker,Chain,Post_Zeit,Kurs_bei_Post_USD,Kurs_bei_Post_Method
 2026-08-02,Morgen-Scan,LUNA CLASSIC,LUNC,solana,07:01,0.0001785,live,0.000179,+0.28,beobachtet
 2026-08-02,Nachmittags-Scan,BRICKTON,BRICK,solana,15:03,0.0004965,live,0.0006815,+37.26,beobachtet
 2026-08-02,Nachmittags-Scan,Litas,LITAS,ethereum,15:03,0.01358717,live,0.013966606091,+2.79,beobachtet
-2026-08-03,Morgen-Scan,Andy,安迪,bsc,07:04,0.000003548,live,,,ausstehend (22-Uhr-Lauf steht noch aus)
-2026-08-03,Morgen-Scan,Giggle Cat,GICAT,bnb,07:04,0.002640056861,live,,,ausstehend (22-Uhr-Lauf steht noch aus)
-2026-08-03,Nachmittags-Scan,Tilly,Tilly,solana,15:03,0.0001297,live,,,ausstehend (22-Uhr-Lauf steht noch aus)
-2026-08-03,Nachmittags-Scan,FREEPIERS,FPC,solana,15:03,0.00003195,live,,,ausstehend (22-Uhr-Lauf steht noch aus)
+2026-08-03,Morgen-Scan,Andy,安迪,bsc,07:04,0.000003548,live,0.000003358,-5.36,beobachtet
+2026-08-03,Morgen-Scan,Giggle Cat,GICAT,bnb,07:04,0.002640056861,live,0.002686,+1.74,beobachtet
+2026-08-03,Nachmittags-Scan,Tilly,Tilly,solana,15:03,0.0001297,live,0.0001277,-1.54,beobachtet
+2026-08-03,Nachmittags-Scan,FREEPIERS,FPC,solana,15:03,0.00003195,live,0.00002549,-20.22,beobachtet

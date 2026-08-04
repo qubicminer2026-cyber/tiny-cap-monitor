@@ -354,8 +354,8 @@
     "price_usd_post_methode": "live",
     "quelle_url": "https://dexscreener.com/bsc/0x737e652ee9c448c3ddc6893267b3852246f95f7d",
     "kurznotiz": "Quelle: DEXScreener (token-boosts/token-profiles Kandidatenliste). 6h-Aenderung im Zielkorridor (5-10%), Liquiditaet ueber Mindestschwelle. Sehr niedrige Marktkapitalisierung (< k) - extrem illiquide, hohes Manipulationsrisiko.",
-    "nachbeobachtung_pct": null,
-    "nachbeobachtung_status": "ausstehend"
+    "nachbeobachtung_pct": -5.36,
+    "nachbeobachtung_status": "beobachtet"
   },
   {
     "timestamp_iso": "2026-08-03T07:04:15+02:00",
@@ -370,9 +370,9 @@
     "price_usd_post": 0.002640056861,
     "price_usd_post_methode": "live",
     "quelle_url": "https://cryptorank.io/price/giggle-cat",
-    "kurznotiz": "Quelle: CryptoRank (24h-Aenderung +11.87%, kein 6h-Feld verfuegbar). Volumen/Marktkap-Verhaeltnis ca. 0.63 - plausibelstes Verhaeltnis unter den gepruefte CryptoRank-Kandidaten (mehrere zeigten Volumenwerte bis zum millionenfachen der Marktkap, vermutlich Datenfehler des inoffiziellen Endpoints, daher ausgeschlossen).",
-    "nachbeobachtung_pct": null,
-    "nachbeobachtung_status": "ausstehend"
+    "kurznotiz": "Quelle: CryptoRank (24h-Aenderung +11.87%, kein 6h-Feld verfuegbar). Volumen/Marktkap-Verhaeltnis ca. 0.63 - plausibelstes Verhaeltnis unter den gepruefte CryptoRank-Kandidaten (mehrere zeigten Volumenwerte bis zum millionenfachen der Marktkap, vermutlich Datenfehler des inoffiziellen Endpoints, daher ausgeschlossen). Nachbeobachtung: CryptoRank listet den Titel um 22 Uhr nicht mehr im Top-5000-Ranking (moeglicherweise herausgefallen) - stattdessen DEXScreener-Pair derselben tokenAddress als Fallback fuer den 22-Uhr-Kurs genutzt.",
+    "nachbeobachtung_pct": 1.74,
+    "nachbeobachtung_status": "beobachtet"
   },
   {
     "timestamp_iso": "2026-08-03T15:03:00+02:00",
@@ -388,8 +388,8 @@
     "price_usd_post_methode": "live",
     "quelle_url": "https://dexscreener.com/solana/4mdjwjxavhq2ckbq5jezcowblvwcgx3uftjp4ts8rnmw",
     "kurznotiz": "Frisch aktiver Solana-Token, solide Liquiditaet ca. 39k USD, konsistentes Momentum (h1 +6.5%, h6 +5.91%, h24 +4.81%) - kein Einzelspike. Zweites Pool desselben Tokens mit deutlich duennerer Liquiditaet (~1.9k USD) wegen Datenqualitaet ausgeschlossen.",
-    "nachbeobachtung_pct": null,
-    "nachbeobachtung_status": "ausstehend"
+    "nachbeobachtung_pct": -1.54,
+    "nachbeobachtung_status": "beobachtet"
   },
   {
     "timestamp_iso": "2026-08-03T15:03:00+02:00",
@@ -405,7 +405,7 @@
     "price_usd_post_methode": "live",
     "quelle_url": "https://dexscreener.com/solana/d9vnp2a1mbrr5xzt8qbkpjz8cpyn1bmnqkj1f778ke8b",
     "kurznotiz": "Solide Liquiditaet ca. 11.6k USD, h6- und h24-Aenderung identisch (+7.11%) - Momentum konzentriert im aktuellen Fenster, h1 mit +5.62% bereits im Zielkorridor.",
-    "nachbeobachtung_pct": null,
-    "nachbeobachtung_status": "ausstehend"
+    "nachbeobachtung_pct": -20.22,
+    "nachbeobachtung_status": "beobachtet"
   }
 ]
