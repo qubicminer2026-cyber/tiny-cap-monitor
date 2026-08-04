@@ -407,5 +407,39 @@
     "kurznotiz": "Solide Liquiditaet ca. 11.6k USD, h6- und h24-Aenderung identisch (+7.11%) - Momentum konzentriert im aktuellen Fenster, h1 mit +5.62% bereits im Zielkorridor.",
     "nachbeobachtung_pct": -20.22,
     "nachbeobachtung_status": "beobachtet"
+  },
+  {
+    "timestamp_iso": "2026-08-04T07:05:00+02:00",
+    "fenster": "Morgen-Scan",
+    "coin_name": "CateDoge",
+    "ticker": "Coge",
+    "chain": "solana",
+    "tokenAddress": "Ck39NqjfBzD5GDkjS3Y9G8FzrnF9qN5zsg6YxAAqpump",
+    "marketCap_usd": 3958,
+    "liquidity_usd": 3399.75,
+    "change_h6_pct": 9.19,
+    "price_usd_post": 4.101e-06,
+    "price_usd_post_methode": "live",
+    "quelle_url": "https://dexscreener.com/solana/67vzknkzrf9uvspvrxtf3xp6thhyhvws7kqcppjytwqv",
+    "kurznotiz": "Quelle: DEXScreener (token-boosts/token-profiles Kandidatenliste). 6h-Aenderung im Zielkorridor (5-10%), Liquiditaet knapp ueber Mindestschwelle. Extrem niedrige Marktkapitalisierung (~4k) - hochgradig illiquide, hohes Manipulationsrisiko.",
+    "nachbeobachtung_pct": null,
+    "nachbeobachtung_status": "ausstehend"
+  },
+  {
+    "timestamp_iso": "2026-08-04T07:05:00+02:00",
+    "fenster": "Morgen-Scan",
+    "coin_name": "Giza",
+    "ticker": "GIZA",
+    "chain": "n/a (CryptoRank)",
+    "tokenAddress": null,
+    "marketCap_usd": 506574.69,
+    "liquidity_usd": null,
+    "change_h6_pct": null,
+    "price_usd_post": 0.001488512666,
+    "price_usd_post_methode": "live",
+    "quelle_url": "https://cryptorank.io/price/giza",
+    "kurznotiz": "Quelle: CryptoRank (24h-Aenderung +75.34%, kein 6h-Feld verfuegbar). Volumen/Marktkap-Verhaeltnis ca. 0.34 - im Vergleich zu anderen CryptoRank-Kandidaten (teils Verhaeltnisse im vierstelligen Bereich, vermutlich Datenfehler) plausibel.",
+    "nachbeobachtung_pct": null,
+    "nachbeobachtung_status": "ausstehend"
   }
 ]
