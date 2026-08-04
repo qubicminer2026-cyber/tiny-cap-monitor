@@ -422,8 +422,8 @@
     "price_usd_post_methode": "live",
     "quelle_url": "https://dexscreener.com/solana/67vzknkzrf9uvspvrxtf3xp6thhyhvws7kqcppjytwqv",
     "kurznotiz": "Quelle: DEXScreener (token-boosts/token-profiles Kandidatenliste). 6h-Aenderung im Zielkorridor (5-10%), Liquiditaet knapp ueber Mindestschwelle. Extrem niedrige Marktkapitalisierung (~4k) - hochgradig illiquide, hohes Manipulationsrisiko.",
-    "nachbeobachtung_pct": null,
-    "nachbeobachtung_status": "ausstehend"
+    "nachbeobachtung_pct": -41.14,
+    "nachbeobachtung_status": "beobachtet"
   },
   {
     "timestamp_iso": "2026-08-04T07:05:00+02:00",
@@ -439,7 +439,41 @@
     "price_usd_post_methode": "live",
     "quelle_url": "https://cryptorank.io/price/giza",
     "kurznotiz": "Quelle: CryptoRank (24h-Aenderung +75.34%, kein 6h-Feld verfuegbar). Volumen/Marktkap-Verhaeltnis ca. 0.34 - im Vergleich zu anderen CryptoRank-Kandidaten (teils Verhaeltnisse im vierstelligen Bereich, vermutlich Datenfehler) plausibel.",
-    "nachbeobachtung_pct": null,
-    "nachbeobachtung_status": "ausstehend"
+    "nachbeobachtung_pct": 26.87,
+    "nachbeobachtung_status": "beobachtet"
+  },
+  {
+    "timestamp_iso": "2026-08-04T15:05:00+02:00",
+    "fenster": "Nachmittags-Scan",
+    "coin_name": "Runwago",
+    "ticker": "RWG",
+    "chain": "n/a (CryptoRank)",
+    "tokenAddress": null,
+    "marketCap_usd": 115526.52,
+    "liquidity_usd": null,
+    "change_h6_pct": null,
+    "price_usd_post": 0.002256901021,
+    "price_usd_post_methode": "live",
+    "quelle_url": "https://cryptorank.io/price/runwago",
+    "kurznotiz": "Quelle: CryptoRank (24h-Aenderung +11.84%, kein 6h-Feld verfuegbar). Volumen/Marktkap-Verhaeltnis ca. 0.06 - plausibel. DEXScreener lieferte in diesem Fenster keine validen Kandidaten (57 geprueft, nur 1 mit fehlender Liquiditaetsangabe).",
+    "nachbeobachtung_pct": -0.39,
+    "nachbeobachtung_status": "beobachtet"
+  },
+  {
+    "timestamp_iso": "2026-08-04T15:05:00+02:00",
+    "fenster": "Nachmittags-Scan",
+    "coin_name": "Quantinuum Tokenized bStocks",
+    "ticker": "QNTB",
+    "chain": "n/a (CryptoRank)",
+    "tokenAddress": null,
+    "marketCap_usd": 524773.23,
+    "liquidity_usd": null,
+    "change_h6_pct": null,
+    "price_usd_post": 59.316472976106,
+    "price_usd_post_methode": "live",
+    "quelle_url": "https://cryptorank.io/price/quantinuum-tokenized-bstocks",
+    "kurznotiz": "Quelle: CryptoRank (24h-Aenderung +13.77%, kein 6h-Feld verfuegbar). Tokenisiertes Aktien-Wrapper-Produkt (Ondo-artig), Volumen/Marktkap-Verhaeltnis ca. 0.03 - plausibel.",
+    "nachbeobachtung_pct": -2.62,
+    "nachbeobachtung_status": "beobachtet"
   }
 ]
