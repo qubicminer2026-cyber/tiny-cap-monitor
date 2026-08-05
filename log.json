@@ -475,5 +475,39 @@
     "kurznotiz": "Quelle: CryptoRank (24h-Aenderung +13.77%, kein 6h-Feld verfuegbar). Tokenisiertes Aktien-Wrapper-Produkt (Ondo-artig), Volumen/Marktkap-Verhaeltnis ca. 0.03 - plausibel.",
     "nachbeobachtung_pct": -2.62,
     "nachbeobachtung_status": "beobachtet"
+  },
+  {
+    "timestamp_iso": "2026-08-05T22:11:17+02:00",
+    "fenster": "Abend-Scan",
+    "coin_name": "Bitstarter",
+    "ticker": "SN91",
+    "chain": "bittensor",
+    "tokenAddress": null,
+    "marketCap_usd": 173989.74,
+    "liquidity_usd": null,
+    "change_h6_pct": null,
+    "price_usd_post": 2.010427135476,
+    "price_usd_post_methode": "live",
+    "quelle_url": "https://cryptorank.io/price/bitstarter",
+    "kurznotiz": "Quelle: CryptoRank (24h-Aenderung +15.57%, kein 6h-Feld verfuegbar). Bittensor-Subnet-Token (Kategorie AI). Volumen/Marktkap-Verhaeltnis ca. 1.4 - plausibel im Vergleich zu anderen Kandidaten mit teils drei- bis fuenfstelligen Verhaeltnissen.",
+    "nachbeobachtung_pct": null,
+    "nachbeobachtung_status": null
+  },
+  {
+    "timestamp_iso": "2026-08-05T22:11:17+02:00",
+    "fenster": "Abend-Scan",
+    "coin_name": "Shutter",
+    "ticker": "SHU",
+    "chain": "ethereum",
+    "tokenAddress": "0xe485E2f1bab389C08721B291f6b59780feC83Fd7",
+    "marketCap_usd": 540507.82,
+    "liquidity_usd": null,
+    "change_h6_pct": null,
+    "price_usd_post": 0.001427957742,
+    "price_usd_post_methode": "live",
+    "quelle_url": "https://cryptorank.io/price/shutter",
+    "kurznotiz": "Quelle: CryptoRank (24h-Aenderung +20.00%, kein 6h-Feld verfuegbar). Bekanntes DeFi-Privacy-Protokoll mit Funding-Historie. Volumen/Marktkap-Verhaeltnis ca. 3.5 - plausibel.",
+    "nachbeobachtung_pct": null,
+    "nachbeobachtung_status": null
   }
 ]

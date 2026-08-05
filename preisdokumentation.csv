@@ -24,3 +24,5 @@ Datum,Fenster,Coin,Ticker,Chain,Post_Zeit,Kurs_bei_Post_USD,Kurs_bei_Post_Method
 2026-08-04,Morgen-Scan,Giza,GIZA,n/a (CryptoRank),07:05,0.001488512666,live,0.001888479882,26.87,beobachtet
 2026-08-04,Nachmittags-Scan,Runwago,RWG,n/a (CryptoRank),15:05,0.002256901021,live,0.002248053094,-0.39,beobachtet
 2026-08-04,Nachmittags-Scan,Quantinuum Tokenized bStocks,QNTB,n/a (CryptoRank),15:05,59.316472976106,live,57.763716562221,-2.62,beobachtet
+2026-08-05,Abend-Scan,Bitstarter,SN91,bittensor,22:11,2.010427135476,live,,,"gefunden (Abend-Scan, kein weiterer Nachbeobachtungslauf im Skill vorgesehen)"
+2026-08-05,Abend-Scan,Shutter,SHU,ethereum,22:11,0.001427957742,live,,,"gefunden (Abend-Scan, kein weiterer Nachbeobachtungslauf im Skill vorgesehen)"
