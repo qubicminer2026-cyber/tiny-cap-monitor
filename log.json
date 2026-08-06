@@ -524,8 +524,8 @@
     "price_usd_post_methode": "live",
     "quelle_url": "https://dexscreener.com/robinhood/0x6890ad20b8a703199dcd634edd0d261854e33812e81525b0c15750b2690a0844",
     "kurznotiz": "Quelle: DEXScreener (Zielkorridor 6h +5% bis +10%). Handelspaar erst ca. 90 Min. vor Abfrage erstellt (pairCreatedAt), h6- und h24-Aenderung daher identisch – kein echtes 6h-Fenster, sondern Aenderung seit Pair-Launch. Volumen/Marktkap-Verhaeltnis ca. 8 – im Rahmen bisheriger Kandidaten.",
-    "nachbeobachtung_pct": null,
-    "nachbeobachtung_status": null
+    "nachbeobachtung_pct": -3.868,
+    "nachbeobachtung_status": "beobachtet (-3.87%)"
   },
   {
     "timestamp_iso": "2026-08-06T07:03:00+02:00",
@@ -541,7 +541,41 @@
     "price_usd_post_methode": "live",
     "quelle_url": "https://cryptorank.io/price/ripe-protocol",
     "kurznotiz": "Quelle: CryptoRank (24h-Aenderung +59.68%, kein 6h-Feld verfuegbar). Etabliertes DeFi-Protokoll (Listing 2025-07-27, FDV ca. .27 Mio.) – die winzige marketCap von nur ca. 0.5k entsteht durch extrem niedrigen zirkulierenden Anteil (nur 0.46% des Supply), nicht durch geringe Projektgroesse. Erreichte laut Datenquelle erst gestern (2026-08-05) ein Allzeittief, danach Erholung – klassisches Muster einer Gegenbewegung. Volumen/Marktkap-Verhaeltnis ca. 3.8 – vergleichsweise plausibel.",
-    "nachbeobachtung_pct": null,
-    "nachbeobachtung_status": null
+    "nachbeobachtung_pct": 0.5131,
+    "nachbeobachtung_status": "beobachtet (+0.51%)"
+  },
+  {
+    "timestamp_iso": "2026-08-06T15:03:00+02:00",
+    "fenster": "Nachmittags-Scan",
+    "coin_name": "Redwire Tokenized Stock (Ondo)",
+    "ticker": "RDWon",
+    "chain": "n/a (CryptoRank)",
+    "tokenAddress": null,
+    "marketCap_usd": 10042.52,
+    "liquidity_usd": null,
+    "change_h6_pct": null,
+    "price_usd_post": 11.718222857944,
+    "price_usd_post_methode": "live",
+    "quelle_url": "https://cryptorank.io/price/redwire-tokenized-stock-ondo",
+    "kurznotiz": "Quelle: CryptoRank (24h-Aenderung +10.36%, kein 6h-Feld verfuegbar). Tokenisierte Aktienrepraesentation (Redwire via Ondo), nur 857 Token Gesamtsupply, marketDataNotAvailable-Flag in der Quelle gesetzt (Preisverifizierung eingeschraenkt). Volumen/Marktkap-Verhaeltnis ca. 0.98 - plausibel (Handelsvolumen entspricht etwa der Marktkap).",
+    "nachbeobachtung_pct": 0.5868,
+    "nachbeobachtung_status": "beobachtet (+0.59%)"
+  },
+  {
+    "timestamp_iso": "2026-08-06T15:03:00+02:00",
+    "fenster": "Nachmittags-Scan",
+    "coin_name": "Port3 Network",
+    "ticker": "PORT3",
+    "chain": "bnb",
+    "tokenAddress": "0xf6402bEc11BD945BBd46BE77e1fA5D477883F6C2",
+    "marketCap_usd": 184076.64,
+    "liquidity_usd": null,
+    "change_h6_pct": null,
+    "price_usd_post": 0.000673624842,
+    "price_usd_post_methode": "live",
+    "quelle_url": "https://cryptorank.io/price/port-3-network",
+    "kurznotiz": "Quelle: CryptoRank (24h-Aenderung +13.80%, kein 6h-Feld verfuegbar). Etabliertes AI/Web3-Protokoll mit Funding-Historie, ATH bei 0.33 USD (Okt 2025) - aktuelle winzige Marktkap spiegelt starken Rueckgang seither wider, nur 27.33% des Supply zirkulierend. Volumen/Marktkap-Verhaeltnis ca. 3.47 - plausibel.",
+    "nachbeobachtung_pct": 2.8763,
+    "nachbeobachtung_status": "beobachtet (+2.88%)"
   }
 ]
