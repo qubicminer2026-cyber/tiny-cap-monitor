@@ -26,3 +26,5 @@ Datum,Fenster,Coin,Ticker,Chain,Post_Zeit,Kurs_bei_Post_USD,Kurs_bei_Post_Method
 2026-08-04,Nachmittags-Scan,Quantinuum Tokenized bStocks,QNTB,n/a (CryptoRank),15:05,59.316472976106,live,57.763716562221,-2.62,beobachtet
 2026-08-05,Abend-Scan,Bitstarter,SN91,bittensor,22:11,2.010427135476,live,,,"gefunden (Abend-Scan, kein weiterer Nachbeobachtungslauf im Skill vorgesehen)"
 2026-08-05,Abend-Scan,Shutter,SHU,ethereum,22:11,0.001427957742,live,,,"gefunden (Abend-Scan, kein weiterer Nachbeobachtungslauf im Skill vorgesehen)"
+2026-08-06,Morgen-Scan,Uni Packs,UNIPA,robinhood,07:03,0.000005274,live,,,ausstehend (22-Uhr-Lauf steht noch aus)
+2026-08-06,Morgen-Scan,Ripe Protocol,RIPE,base,07:03,0.220959729826,live,,,ausstehend (22-Uhr-Lauf steht noch aus)

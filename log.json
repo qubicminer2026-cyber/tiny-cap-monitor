@@ -509,5 +509,39 @@
     "kurznotiz": "Quelle: CryptoRank (24h-Aenderung +20.00%, kein 6h-Feld verfuegbar). Bekanntes DeFi-Privacy-Protokoll mit Funding-Historie. Volumen/Marktkap-Verhaeltnis ca. 3.5 - plausibel.",
     "nachbeobachtung_pct": null,
     "nachbeobachtung_status": null
+  },
+  {
+    "timestamp_iso": "2026-08-06T07:03:00+02:00",
+    "fenster": "Morgen-Scan",
+    "coin_name": "Uni Packs",
+    "ticker": "UNIPA",
+    "chain": "robinhood",
+    "tokenAddress": "0x83A57A98f18002A606C765dB9950ca6818c525A6",
+    "marketCap_usd": 5275,
+    "liquidity_usd": 5283.68,
+    "change_h6_pct": 7.45,
+    "price_usd_post": 5.274e-06,
+    "price_usd_post_methode": "live",
+    "quelle_url": "https://dexscreener.com/robinhood/0x6890ad20b8a703199dcd634edd0d261854e33812e81525b0c15750b2690a0844",
+    "kurznotiz": "Quelle: DEXScreener (Zielkorridor 6h +5% bis +10%). Handelspaar erst ca. 90 Min. vor Abfrage erstellt (pairCreatedAt), h6- und h24-Aenderung daher identisch – kein echtes 6h-Fenster, sondern Aenderung seit Pair-Launch. Volumen/Marktkap-Verhaeltnis ca. 8 – im Rahmen bisheriger Kandidaten.",
+    "nachbeobachtung_pct": null,
+    "nachbeobachtung_status": null
+  },
+  {
+    "timestamp_iso": "2026-08-06T07:03:00+02:00",
+    "fenster": "Morgen-Scan",
+    "coin_name": "Ripe Protocol",
+    "ticker": "RIPE",
+    "chain": "base",
+    "tokenAddress": "0x2A0a59d6B975828e781EcaC125dBA40d7ee5dDC0",
+    "marketCap_usd": 10550.61,
+    "liquidity_usd": null,
+    "change_h6_pct": null,
+    "price_usd_post": 0.220959729826,
+    "price_usd_post_methode": "live",
+    "quelle_url": "https://cryptorank.io/price/ripe-protocol",
+    "kurznotiz": "Quelle: CryptoRank (24h-Aenderung +59.68%, kein 6h-Feld verfuegbar). Etabliertes DeFi-Protokoll (Listing 2025-07-27, FDV ca. .27 Mio.) – die winzige marketCap von nur ca. 0.5k entsteht durch extrem niedrigen zirkulierenden Anteil (nur 0.46% des Supply), nicht durch geringe Projektgroesse. Erreichte laut Datenquelle erst gestern (2026-08-05) ein Allzeittief, danach Erholung – klassisches Muster einer Gegenbewegung. Volumen/Marktkap-Verhaeltnis ca. 3.8 – vergleichsweise plausibel.",
+    "nachbeobachtung_pct": null,
+    "nachbeobachtung_status": null
   }
 ]
